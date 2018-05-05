@@ -15,3 +15,60 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "history" # Used in routes, e.g., /admin/collections/blog
+    label: "History" # Used in the UI
+    folder: "content/history" # The path to the folder where the documents are stored
+    filter: {field: "layout", value: "vertical-halves"}
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    format: 'md'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "history_layout2" # Used in routes, e.g., /admin/collections/blog
+    label: "History" # Used in the UI
+    folder: "content/history" # The path to the folder where the documents are stored
+    filter: {field: "layout", value: "horizontal-halves"}
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    format: 'md'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "research" # Used in routes, e.g., /admin/collections/blog
+    label: "Research" # Used in the UI
+    folder: "content/research" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    format: 'md'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "animals" # Used in routes, e.g., /admin/collections/blog
+    label: "Animals" # Used in the UI
+    folder: "content/animals" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    format: 'md'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "birds" # Used in routes, e.g., /admin/collections/blog
+    label: "Birds" # Used in the UI
+    folder: "content/animals/birds" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    format: 'md'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}

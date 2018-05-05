@@ -1,14 +1,16 @@
 var glob = require('glob');
 var path = require('path');
+var fm = require('front-matter');
 
 // Enhance Nuxt's generate process by gathering all content files from Netifly CMS
 // automatically and match it to the path of your Nuxt routes.
 // The Nuxt routes are generate by Nuxt automatically based on the pages folder.
-/*
+
 var dynamicRoutes = getDynamicPaths({
-  '/blog': 'blog/posts/*.json'
+  '/blog': 'blog/posts/*.json',
+  '/research': 'research/projects/*.json'
 });
-*/
+
 
 module.exports = {
   /*
@@ -33,15 +35,32 @@ module.exports = {
   ** Route config for pre-rendering
   */
   generate: {
-    //routes: dynamicRoutes
+    routes: dynamicRoutes
   },
   modules: [
-    ['nuxtent']
+    //['nuxtent']
+    '@nuxtjs/markdownit',
+   
   ],
+  markdownit: {
+
+    preset: 'default',
+  
+    breaks: true,
+    preprocess: function (markdownIt, source) {
+      // do any thing
+      console.log('source',markdownIt)
+      markdownIt.fm=fm(source)
+      console.log('source',  markdownIt)
+      return markdownIt.fm.body
+    },
+    
+  },
   /*
   ** Build configuration
   */
   build: {
+    vendor:['front-matter'],
     /*
     ** Run ESLint on save
     */
@@ -56,7 +75,7 @@ module.exports = {
       }
     }
   }
-},
+}
 
 
 /**

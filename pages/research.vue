@@ -1,17 +1,7 @@
 <template>
   <section class="container">
-    <h2>Blog</h2>
-    <ul>
-      <li v-for="post in posts" :key="post.date">
-        <nuxt-link :to="post._path">
-          {{ post.title }}
-        </nuxt-link>
-      
-      </li>
-            <nuxt-link 
-          to="/blog" 
-          class="button--green">See Your First Post</nuxt-link>
-    </ul>
+    <h2>Research</h2>
+ <nuxt-child/>
   </section>
 </template>
 
@@ -40,6 +30,7 @@ export default {
 .container {
   min-height: 100vh;
   display: flex;
+  background:blue;
   justify-content: center;
   align-items: center;
   text-align: center;

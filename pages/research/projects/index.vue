@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h2>Blog</h2>
+    <h2>research Index</h2>
     <ul>
       <li v-for="post in posts" :key="post.date">
         <nuxt-link :to="post._path">
@@ -12,6 +12,7 @@
           to="/blog" 
           class="button--green">See Your First Post</nuxt-link>
     </ul>
+
   </section>
 </template>
 
@@ -24,13 +25,17 @@ export default {
   },
   data() {
     // Using webpacks context to gather all files from a folder
-    const context = require.context('~/content/blog/posts/', false, /\.json$/);
+    const context = require.context('~/content/research/', false, /\.json$/);
 
     const posts = context.keys().map(key => ({
       ...context(key),
-      _path: `/blog/${key.replace('.json', '').replace('./', '')}`
+      _path: `/research/projects/${key.replace('.json', '').replace('./', '')}`
     }));
-
+     // const index = require('~/content/research/index.json');
+     // console.log(index,'indexxx')
+   // console.log('post',params,post)
+    //post.body=  post.body.replace(/\n/g, "<br />");
+   // return post;
     return { posts };
   }
 };

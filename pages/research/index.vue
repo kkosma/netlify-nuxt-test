@@ -1,37 +1,37 @@
 <template>
   <section class="container">
-    <h2>Blog</h2>
-    <ul>
-      <li v-for="post in posts" :key="post.date">
-        <nuxt-link :to="post._path">
-          {{ post.title }}
-        </nuxt-link>
-      
-      </li>
-            <nuxt-link 
-          to="/blog" 
-          class="button--green">See Your First Post</nuxt-link>
-    </ul>
+ 
+  
+
+     <div v-html="index"></div>
   </section>
 </template>
 
 <script>
 import AppLogo from '~/components/AppLogo.vue';
-
+import fm from 'front-matter'
+//import FirstPost from '/content/research/index.md'
 export default {
   components: {
     AppLogo
   },
-  data() {
+  asyncData(context) {
     // Using webpacks context to gather all files from a folder
-    const context = require.context('~/content/blog/posts/', false, /\.json$/);
+    const context2 = require.context('~/content/research/', false, /\.json$/);
 
-    const posts = context.keys().map(key => ({
-      ...context(key),
-      _path: `/blog/${key.replace('.json', '').replace('./', '')}`
+    const posts = context2.keys().map(key => ({
+      ...context2(key),
+      _path: `/research/projects/${key.replace('.json', '').replace('./', '')}`
     }));
-
-    return { posts };
+     //const FirstPost = require('/content/research/index.md');
+      const index = require('~/content/research/index.md');
+      // console.log(context.app,'first')
+      //const front=fm(FirstPost)
+      //console.log(index,'indexxx',context)
+   // console.log('post',params,post)
+    //post.body=  post.body.replace(/\n/g, "<br />");
+   // return post;
+    return { posts,index };
   }
 };
 </script>
