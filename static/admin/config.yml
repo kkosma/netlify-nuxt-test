@@ -57,23 +57,13 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "animals" # Used in routes, e.g., /admin/collections/blog
-    label: "Animals" # Used in the UI
-    folder: "content/animals" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: 'md'
-    fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
   - name: "birds" # Used in routes, e.g., /admin/collections/blog
     label: "Birds" # Used in the UI
     folder: "content/animals" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'md'
+    filter: {field: "category", value: "birds"}
     fields: # The fields for each document, usually in front matter
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Name", name: "name", widget: "string"}
@@ -88,6 +78,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'md'
+    filter: {field: "category", value: "invertebrates"}
     fields: # The fields for each document, usually in front matter
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Name", name: "name", widget: "string"}
@@ -102,6 +93,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'md'
+    filter: {field: "category", value: "mammals"}
     fields: # The fields for each document, usually in front matter
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Name", name: "name", widget: "string"}
@@ -110,13 +102,13 @@ collections:
       - {label: "Size", name: "size", widget: "string"}
       - {label: "Lifespan", name: "lifespan", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-
   - name: "fish" # Used in routes, e.g., /admin/collections/blog
     label: "Fish" # Used in the UI
     folder: "content/animals" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'md'
+    filter: {field: "category", value: "fish"}
     fields: # The fields for each document, usually in front matter
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Name", name: "name", widget: "string"}
@@ -131,6 +123,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'md'
+    filter: {field: "category", value: "salmon"}
     fields: # The fields for each document, usually in front matter
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Name", name: "name", widget: "string"}
@@ -139,21 +132,3 @@ collections:
       - {label: "Size", name: "size", widget: "string"}
       - {label: "Lifespan", name: "lifespan", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - label: "Blog in English"
-    name: "english_posts"
-    folder: "_posts"
-    create: true # Allow users to create new documents in this collection
-    filter: {field: "language", value: "en"}
-    fields:
-      - {label: "Language", name: "language", widget: "select", options: ["en", "es"]}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Content", name: "body", widget: "markdown"}      
-  - label: "Blog en Español"
-    name: "spanish_posts"
-    folder: "_posts"
-    create: true # Allow users to create new documents in this collection
-    filter: {field: "language", value: "es"}
-    fields:
-      - {label: "Lenguaje", name: "language", widget: "select", options: ["en", "es"]}
-      - {label: "Titulo", name: "title", widget: "string"}
-      - {label: "Contenido", name: "body", widget: "markdown"}      
