@@ -1,6 +1,6 @@
 ---
 image: /images/uploads/hairy_triton.jpg
-name: Oregon Hairy Triton
+title: Oregon Hairy Triton
 scientific_name: Fusitriton oregonensis
 distribution: 'Japan to Alaska to California, intertidal to 90m'
 size: Up to 15cm (6 inches)
