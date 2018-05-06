@@ -72,6 +72,7 @@ collections:
       - {label: "Size", name: "size", widget: "string"}
       - {label: "Lifespan", name: "lifespan", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Category", name: "category", widget: "hidden", default: "birds"}
   - name: "invertebrates" # Used in routes, e.g., /admin/collections/blog
     label: "Invertebrates" # Used in the UI
     folder: "content/animals" # The path to the folder where the documents are stored
@@ -87,6 +88,7 @@ collections:
       - {label: "Size", name: "size", widget: "string"}
       - {label: "Lifespan", name: "lifespan", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Category", name: "category", widget: "hidden", default: "invertebrates"}
   - name: "mammals" # Used in routes, e.g., /admin/collections/blog
     label: "Mammals" # Used in the UI
     folder: "content/animals" # The path to the folder where the documents are stored
@@ -102,6 +104,7 @@ collections:
       - {label: "Size", name: "size", widget: "string"}
       - {label: "Lifespan", name: "lifespan", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Category", name: "category", widget: "hidden", default: "mammals"}
   - name: "fish" # Used in routes, e.g., /admin/collections/blog
     label: "Fish" # Used in the UI
     folder: "content/animals" # The path to the folder where the documents are stored
@@ -117,6 +120,7 @@ collections:
       - {label: "Size", name: "size", widget: "string"}
       - {label: "Lifespan", name: "lifespan", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Category", name: "category", widget: "hidden", default: "fish"}
   - name: "salmon" # Used in routes, e.g., /admin/collections/blog
     label: "Salmon" # Used in the UI
     folder: "content/animals" # The path to the folder where the documents are stored
@@ -132,3 +136,4 @@ collections:
       - {label: "Size", name: "size", widget: "string"}
       - {label: "Lifespan", name: "lifespan", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Category", name: "category", widget: "hidden", default: "salmon"}
