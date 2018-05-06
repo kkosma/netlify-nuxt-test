@@ -38,10 +38,11 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Gallery", name: "galleryImages", widget: "list", 
-          field:
+      - label: "Gallery" 
+        name: "galleryImages"
+        widget: "list",
+        fields:
           - {label: Image, name: image, widget: image}
-        }
   - name: "education" # Used in routes, e.g., /admin/collections/blog
     label: "Education" # Used in the UI
     folder: "content/education" # The path to the folder where the documents are stored
