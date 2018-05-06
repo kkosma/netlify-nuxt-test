@@ -66,7 +66,7 @@ collections:
     filter: {field: "category", value: "birds"}
     fields: # The fields for each document, usually in front matter
       - {label: "Image", name: "image", widget: "image", required: true}
-      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Name", name: "title", widget: "string"}
       - {label: "Scientific Name", name: "scientific_name", widget: "string"}
       - {label: "Distribution", name: "distribution", widget: "string"}
       - {label: "Size", name: "size", widget: "string"}
@@ -81,7 +81,7 @@ collections:
     filter: {field: "category", value: "invertebrates"}
     fields: # The fields for each document, usually in front matter
       - {label: "Image", name: "image", widget: "image", required: true}
-      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Name", name: "title", widget: "string"}
       - {label: "Scientific Name", name: "scientific_name", widget: "string"}
       - {label: "Distribution", name: "distribution", widget: "string"}
       - {label: "Size", name: "size", widget: "string"}
@@ -96,7 +96,7 @@ collections:
     filter: {field: "category", value: "mammals"}
     fields: # The fields for each document, usually in front matter
       - {label: "Image", name: "image", widget: "image", required: true}
-      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Name", name: "title", widget: "string"}
       - {label: "Scientific Name", name: "scientific_name", widget: "string"}
       - {label: "Distribution", name: "distribution", widget: "string"}
       - {label: "Size", name: "size", widget: "string"}
@@ -111,7 +111,7 @@ collections:
     filter: {field: "category", value: "fish"}
     fields: # The fields for each document, usually in front matter
       - {label: "Image", name: "image", widget: "image", required: true}
-      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Name", name: "title", widget: "string"}
       - {label: "Scientific Name", name: "scientific_name", widget: "string"}
       - {label: "Distribution", name: "distribution", widget: "string"}
       - {label: "Size", name: "size", widget: "string"}
@@ -126,7 +126,7 @@ collections:
     filter: {field: "category", value: "salmon"}
     fields: # The fields for each document, usually in front matter
       - {label: "Image", name: "image", widget: "image", required: true}
-      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Name", name: "title", widget: "string"}
       - {label: "Scientific Name", name: "scientific_name", widget: "string"}
       - {label: "Distribution", name: "distribution", widget: "string"}
       - {label: "Size", name: "size", widget: "string"}
