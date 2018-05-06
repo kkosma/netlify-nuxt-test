@@ -27,18 +27,6 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "history_layout2" # Used in routes, e.g., /admin/collections/blog
-    label: "History" # Used in the UI
-    folder: "content/history" # The path to the folder where the documents are stored
-    filter: {field: "layout", value: "horizontal-halves"}
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: 'md'
-    fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
   - name: "research" # Used in routes, e.g., /admin/collections/blog
     label: "Research" # Used in the UI
     folder: "content/research" # The path to the folder where the documents are stored
@@ -47,7 +35,26 @@ collections:
     extension: 'md'
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "education" # Used in routes, e.g., /admin/collections/blog
+    label: "Education" # Used in the UI
+    folder: "content/education" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'md'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "hatchery" # Used in routes, e.g., /admin/collections/blog
+    label: "Hatchery" # Used in the UI
+    folder: "content/hatchery" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    format: 'json'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "animals" # Used in routes, e.g., /admin/collections/blog
@@ -63,14 +70,74 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "birds" # Used in routes, e.g., /admin/collections/blog
     label: "Birds" # Used in the UI
-    folder: "content/animals/birds" # The path to the folder where the documents are stored
+    folder: "content/animals" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'md'
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Image", name: "image", widget: "image", required: true}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Scientific Name", name: "scientific_name", widget: "string"}
+      - {label: "Distribution", name: "scientific_name", widget: "string"}
+      - {label: "Size", name: "size", widget: "string"}
+      - {label: "Lifespan", name: "lifespan", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "invertebrates" # Used in routes, e.g., /admin/collections/blog
+    label: "Invertebrates" # Used in the UI
+    folder: "content/animals" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'md'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Image", name: "image", widget: "image", required: true}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Scientific Name", name: "scientific_name", widget: "string"}
+      - {label: "Distribution", name: "scientific_name", widget: "string"}
+      - {label: "Size", name: "size", widget: "string"}
+      - {label: "Lifespan", name: "lifespan", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "mammals" # Used in routes, e.g., /admin/collections/blog
+    label: "Mammals" # Used in the UI
+    folder: "content/animals" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'md'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Image", name: "image", widget: "image", required: true}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Scientific Name", name: "scientific_name", widget: "string"}
+      - {label: "Distribution", name: "scientific_name", widget: "string"}
+      - {label: "Size", name: "size", widget: "string"}
+      - {label: "Lifespan", name: "lifespan", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "fish" # Used in routes, e.g., /admin/collections/blog
+    label: "Fish" # Used in the UI
+    folder: "content/animals" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'md'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Image", name: "image", widget: "image", required: true}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Scientific Name", name: "scientific_name", widget: "string"}
+      - {label: "Distribution", name: "scientific_name", widget: "string"}
+      - {label: "Size", name: "size", widget: "string"}
+      - {label: "Lifespan", name: "lifespan", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "salmon" # Used in routes, e.g., /admin/collections/blog
+    label: "Salmon" # Used in the UI
+    folder: "content/animals" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'md'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Image", name: "image", widget: "image", required: true}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Scientific Name", name: "scientific_name", widget: "string"}
+      - {label: "Distribution", name: "scientific_name", widget: "string"}
+      - {label: "Size", name: "size", widget: "string"}
+      - {label: "Lifespan", name: "lifespan", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - label: "Blog in English"
     name: "english_posts"
