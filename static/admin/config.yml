@@ -78,7 +78,7 @@ collections:
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Scientific Name", name: "scientific_name", widget: "string"}
-      - {label: "Distribution", name: "scientific_name", widget: "string"}
+      - {label: "Distribution", name: "distribution", widget: "string"}
       - {label: "Size", name: "size", widget: "string"}
       - {label: "Lifespan", name: "lifespan", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -92,7 +92,7 @@ collections:
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Scientific Name", name: "scientific_name", widget: "string"}
-      - {label: "Distribution", name: "scientific_name", widget: "string"}
+      - {label: "Distribution", name: "distribution", widget: "string"}
       - {label: "Size", name: "size", widget: "string"}
       - {label: "Lifespan", name: "lifespan", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -106,7 +106,7 @@ collections:
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Scientific Name", name: "scientific_name", widget: "string"}
-      - {label: "Distribution", name: "scientific_name", widget: "string"}
+      - {label: "Distribution", name: "distribution", widget: "string"}
       - {label: "Size", name: "size", widget: "string"}
       - {label: "Lifespan", name: "lifespan", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -121,7 +121,7 @@ collections:
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Scientific Name", name: "scientific_name", widget: "string"}
-      - {label: "Distribution", name: "scientific_name", widget: "string"}
+      - {label: "Distribution", name: "distribution", widget: "string"}
       - {label: "Size", name: "size", widget: "string"}
       - {label: "Lifespan", name: "lifespan", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -135,7 +135,7 @@ collections:
       - {label: "Image", name: "image", widget: "image", required: true}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Scientific Name", name: "scientific_name", widget: "string"}
-      - {label: "Distribution", name: "scientific_name", widget: "string"}
+      - {label: "Distribution", name: "distribution", widget: "string"}
       - {label: "Size", name: "size", widget: "string"}
       - {label: "Lifespan", name: "lifespan", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
