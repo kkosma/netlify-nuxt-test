@@ -1,7 +1,7 @@
 <template>
   <article>
 
-    <div v-html="$md.render(post)"></div>
+          <div v-html="post.__content"></div>
   </article>
 </template>
 

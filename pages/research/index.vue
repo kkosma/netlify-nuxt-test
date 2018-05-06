@@ -1,9 +1,12 @@
 <template>
   <section class="container">
  
-  
-
-     <div v-html="index"></div>
+  <h1>{{index.title}}</h1>
+<p>{{index.description}}</p>
+      <div v-html="index.__content"></div>
+      <div  v-for="post in posts" :key="post.title">
+        {{post.title}}
+      </div>
   </section>
 </template>
 
@@ -17,15 +20,16 @@ export default {
   },
   asyncData(context) {
     // Using webpacks context to gather all files from a folder
-    const context2 = require.context('~/content/research/', false, /\.json$/);
+    
+    const context2 = require.context('~/content/', true, /\.md$/);
 
     const posts = context2.keys().map(key => ({
       ...context2(key),
-      _path: `/research/projects/${key.replace('.json', '').replace('./', '')}`
+      _path: `/${key.replace('.md', '').replace('./', '')}`
     }));
      //const FirstPost = require('/content/research/index.md');
       const index = require('~/content/research/index.md');
-      // console.log(context.app,'first')
+       console.log(posts,'first')
       //const front=fm(FirstPost)
       //console.log(index,'indexxx',context)
    // console.log('post',params,post)
@@ -34,7 +38,7 @@ export default {
     return { posts,index };
   }
 };
-</script>
+</script>x
 
 <style>
 .container {

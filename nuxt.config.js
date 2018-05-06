@@ -5,7 +5,10 @@ var fm = require('front-matter');
 // Enhance Nuxt's generate process by gathering all content files from Netifly CMS
 // automatically and match it to the path of your Nuxt routes.
 // The Nuxt routes are generate by Nuxt automatically based on the pages folder.
-
+var saveMD =function(param){
+  module.exports.env.sourcemd=param
+  console.log(param,'param',module.exports.env)
+}
 var dynamicRoutes = getDynamicPaths({
   '/blog': 'blog/posts/*.json',
   '/research': 'research/projects/*.json'
@@ -39,21 +42,24 @@ module.exports = {
   },
   modules: [
     //['nuxtent']
-    '@nuxtjs/markdownit',
+    //'@nuxtjs/markdownit',
    
   ],
   markdownit: {
 
-    preset: 'default',
-  
-    breaks: true,
-    preprocess: function (markdownIt, source) {
+
+    injected: true,
+
+    /*
+    preprocess: function (markdownIt, parser, source) {
       // do any thing
-      console.log('source',markdownIt)
+     //console.log('source', this)
+     //saveMD(parser)
+      markdownIt.fm={}
       markdownIt.fm=fm(source)
-      console.log('source',  markdownIt)
-      return markdownIt.fm.body
-    },
+     // console.log('source',  markdownIt)
+      return source
+    },*/
     
   },
   /*
@@ -65,6 +71,10 @@ module.exports = {
     ** Run ESLint on save
     */
     extend(config, { isDev, isClient }) {
+      config.module.rules.push({
+          test: /\.md/,
+          loader: 'markdown-with-front-matter-loader', 
+      });
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -74,6 +84,10 @@ module.exports = {
         })
       }
     }
+  },
+  env:{
+    dude:true,
+    sourcemd:''
   }
 }
 
