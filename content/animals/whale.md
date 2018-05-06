@@ -5,5 +5,6 @@ scientific_name: asdf
 distribution: asdf
 size: asdf
 lifespan: asdf
+category: mammals
 ---
 asdf

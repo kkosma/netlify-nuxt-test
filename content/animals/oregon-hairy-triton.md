@@ -5,6 +5,7 @@ scientific_name: Fusitriton oregonensis
 distribution: 'Japan to Alaska to California, intertidal to 90m'
 size: Up to 15cm (6 inches)
 lifespan: Unknown
+category: invertebrates
 ---
 The Oregon hairy triton is a large gastropod with a hairy or bristly shell.  These bristles, called periostracum, keep other settling animals from growing on their shells.  This snail is carnivorous, feeding on chitons, bivalves, tunicates, sea urchins, brittle stars, and other invertebrates.  They are preyed upon by sea stars.
 
