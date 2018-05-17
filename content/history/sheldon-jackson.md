@@ -9,6 +9,9 @@ images:
     thumbnail: /images/uploads/hairy_triton.jpg
   - imagesize: col-4
     thumbnail: /images/uploads/pinto-abalone.70d4389.jpg
+image-compare:
+  image1: /images/uploads/hairy_triton.jpg
+  image2: /images/uploads/giant-pacific-octopus.7fb14e1.jpg
 ---
 The Sage building was built in 1929 with $50,000 that was donated by Margaret Olivia Sage, the wife of a New York businessman. The building housed industrial arts. It also housed the 140 horsepower hydroplant that would supply energy for the campus and the neighborhood until the 1990s.
 
