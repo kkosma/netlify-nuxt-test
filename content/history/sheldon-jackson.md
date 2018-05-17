@@ -1,7 +1,7 @@
 ---
 layout: vertical-2-1
 title: Sheldon Jackson
-year: '19101914'
+year: 1910-1914
 images:
   - imagesize: col-4
     thumbnail: /images/uploads/giant-pacific-octopus.7fb14e1.jpg
