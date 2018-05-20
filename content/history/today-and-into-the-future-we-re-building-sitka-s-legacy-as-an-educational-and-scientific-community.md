@@ -1,8 +1,6 @@
 ---
 layout: horizontal
-title: >-
-  Today and into the future we're building Sitka's legacy as an educational and
-  scientific community.
+title: Present
 year: Present
 images:
   - imagesize: col-12
