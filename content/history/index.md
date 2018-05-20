@@ -1,5 +1,5 @@
 ---
-title: Animals
+title: History
 heading: We offer educational programs for all ages.
 image: /images/uploads/hairy_triton.jpg
 ---

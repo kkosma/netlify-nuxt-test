@@ -181,12 +181,40 @@ collections:
       - {label: "Lifespan", name: "lifespan", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Category", name: "category", widget: "hidden", default: "salmon"}
-  - label: "Intro Pages"
+  - label: "Section Intro Pages"
     name: "pages"
     files:
       - label: "Education Intro"
-        name: "about"
+        name: "education"
         file: "content/education"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Research"
+        name: "research"
+        file: "content/research"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Facilities"
+        name: "facility"
+        file: "content/facility"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "History"
+        name: "history"
+        file: "content/history"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Animals"
+        name: "animals"
+        file: "content/animals"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Heading, name: heading, widget: string}
