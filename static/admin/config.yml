@@ -184,37 +184,37 @@ collections:
   - label: "Section Intro Pages"
     name: "pages"
     files:
-      - label: "Education Intro"
+      - label: "Education"
         name: "education"
-        file: "content/education"
+        file: "content/education/index.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
       - label: "Research"
         name: "research"
-        file: "content/research"
+        file: "content/research/index.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
       - label: "Facilities"
         name: "facility"
-        file: "content/facility"
+        file: "content/facility/index.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
       - label: "History"
         name: "history"
-        file: "content/history"
+        file: "content/history/index.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Heading, name: heading, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
       - label: "Animals"
         name: "animals"
-        file: "content/animals"
+        file: "content/animals/index.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Heading, name: heading, widget: string}
