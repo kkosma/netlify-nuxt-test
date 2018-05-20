@@ -6,11 +6,54 @@ media_folder: "static/images/uploads" # Media files will be stored in the repo u
 
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 collections:
-  
+  - label: "Section Intro Pages"
+    name: "pages"
+    delete: false
+    files:
+      - label: "Education"
+        name: "education"
+        file: "content/education.md"
+        delete: false
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Research"
+        name: "research"
+        file: "content/research.md"
+        delete: false
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Facilities"
+        name: "facility"
+        file: "content/facility.md"
+        delete: false
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "History"
+        name: "history"
+        file: "content/history.md"
+        delete: false
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Animals"
+        name: "animals"
+        file: "content/animals.md"
+        delete: false
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: "Body", name: "body", widget: "markdown"}
+
   - name: "history" # Used in routes, e.g., /admin/collections/blog
     label: "History" # Used in the UI
     folder: "content/history" # The path to the folder where the documents are stored
-    filter: {field: "layout", value: "vertical-halves"}
     create: true # Allow users to create new documents in this collection
     editor:
       preview: false
@@ -53,11 +96,11 @@ collections:
       - label: "Landmark Map"
         name : "landmarkmap"
         widget: "list"
+        required: false
         fields:
           - label: "Landmark"
             name: "landmark"
             widget: "object"
-            required: false
             fields:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Image", name: "image", widget: "image"}
@@ -82,6 +125,17 @@ collections:
   - name: "education" # Used in routes, e.g., /admin/collections/blog
     label: "Education" # Used in the UI
     folder: "content/education" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: 'md'
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "facility" # Used in routes, e.g., /admin/collections/blog
+    label: "Facility" # Used in the UI
+    folder: "content/facility" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     extension: 'md'
@@ -181,43 +235,3 @@ collections:
       - {label: "Lifespan", name: "lifespan", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Category", name: "category", widget: "hidden", default: "salmon"}
-  - label: "Section Intro Pages"
-    name: "pages"
-    files:
-      - label: "Education"
-        name: "education"
-        file: "content/education/index.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Heading, name: heading, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Research"
-        name: "research"
-        file: "content/research/index.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Heading, name: heading, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Facilities"
-        name: "facility"
-        file: "content/facility/index.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Heading, name: heading, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - label: "History"
-        name: "history"
-        file: "content/history/index.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Heading, name: heading, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Animals"
-        name: "animals"
-        file: "content/animals/index.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Heading, name: heading, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-  
-     
