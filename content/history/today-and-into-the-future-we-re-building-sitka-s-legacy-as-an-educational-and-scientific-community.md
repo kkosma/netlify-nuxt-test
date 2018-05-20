@@ -1,5 +1,5 @@
 ---
-layout: horizontal
+layout: full-text-overlay
 title: Present
 year: Present
 images:
