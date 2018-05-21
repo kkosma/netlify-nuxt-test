@@ -1,7 +1,5 @@
 ---
-title: Behind the Scenes
-image: /images/uploads/behind-the-scenes.jpg
-age: Adult 
+title: Behind the Scene
 ---
 
 Are you interested in joining Science Center staff as a volunteer in the aquarium, the hatchery, or as part of educational and community events? Would you like to know more about the marine life and the natural cycles of our island? Have you always wondered what those alien looking structures were behind the Science Center?
