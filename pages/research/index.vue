@@ -28,7 +28,7 @@ export default {
       _path: `/${key.replace('.md', '').replace('./', '')}`
     }));
      //const FirstPost = require('/content/research/index.md');
-      const index = require('~/content/research/index.md');
+      const index = require('~/content/research.md');
        console.log(posts,'first')
       //const front=fm(FirstPost)
       //console.log(index,'indexxx',context)

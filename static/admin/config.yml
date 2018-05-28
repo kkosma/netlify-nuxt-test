@@ -51,6 +51,17 @@ collections:
           - {label: Heading, name: heading, widget: string}
           - {label: "Body", name: "body", widget: "markdown"}
 
+  - label: "App Settings"
+    name: "appsettings"
+    delete: false
+    files:
+      - label: "Settings"
+        name: "settings"
+        file: "content/settings.md"
+        delete: false
+        fields:
+          - {label: Home Heading, name: homeHeading, widget: string}
+
   - name: "history" # Used in routes, e.g., /admin/collections/blog
     label: "History" # Used in the UI
     folder: "content/history" # The path to the folder where the documents are stored
