@@ -9,6 +9,8 @@ collections:
   - label: "Section Intro Pages"
     name: "pages"
     delete: false
+    editor:
+      preview: false
     files:
       - label: "Education"
         name: "education"
@@ -54,13 +56,15 @@ collections:
   - label: "App Settings"
     name: "appsettings"
     delete: false
+    editor:
+      preview: false
     files:
       - label: "Settings"
         name: "settings"
         file: "content/settings.md"
         delete: false
         fields:
-          - {label: Home Heading, name: homeHeading, widget: string}
+          - {label: Home Heading, name: homeHeading, widget: markdown}
 
   - name: "history" # Used in routes, e.g., /admin/collections/blog
     label: "History" # Used in the UI
